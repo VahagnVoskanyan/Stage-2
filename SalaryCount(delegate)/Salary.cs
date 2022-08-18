@@ -8,24 +8,40 @@ namespace SalaryCount_delegate_
 {
     internal class Salary
     {
+        public delegate void SalaryCounter(decimal n); //Delegate
+        event SalaryCounter SalaryCounterEvent; //Event
+        SalaryCounter count; //Delegate instance
+        public Salary()
+        {
+            count += Decreas1;
+            count += Decreas2;
+            count += Decreas3;
+            count += Decreas4;
+            count += Result;
+            SalaryCounterEvent = count;
+        }
+        public void CountRealSalary(decimal n)
+        {
+            SalaryCounterEvent(n);
+        }
         private List<decimal> Decreases = new List<decimal>();
-        public void Decreas1(decimal n)
+        private void Decreas1(decimal n)
         {
             Decreases.Add(1000);
         }
-        public void Decreas2(decimal n)
+        private void Decreas2(decimal n)
         {
             Decreases.Add(n * 7 / 100);
         }
-        public void Decreas3(decimal n)
+        private void Decreas3(decimal n)
         {
             Decreases.Add(n * 9 / 100);
         }
-        public void Decreas4(decimal n)
+        private void Decreas4(decimal n)
         {
             Decreases.Add(n * 11 / 100);
         }
-        public void Result(decimal n)
+        private void Result(decimal n)
         {
             foreach (var item in Decreases)
             {
