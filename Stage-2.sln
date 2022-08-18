@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLinkedList", "MyLinkedLis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ref-Out-In", "Ref-Out-In\Ref-Out-In.csproj", "{9FAC251C-15B3-4CC7-BCF2-A948B382B576}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryCount(delegate,event)", "SalaryCount(delegate,event)\SalaryCount(delegate,event).csproj", "{13D7B885-1FDC-479E-8136-227B931BA7F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9FAC251C-15B3-4CC7-BCF2-A948B382B576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FAC251C-15B3-4CC7-BCF2-A948B382B576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FAC251C-15B3-4CC7-BCF2-A948B382B576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D7B885-1FDC-479E-8136-227B931BA7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D7B885-1FDC-479E-8136-227B931BA7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D7B885-1FDC-479E-8136-227B931BA7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D7B885-1FDC-479E-8136-227B931BA7F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
