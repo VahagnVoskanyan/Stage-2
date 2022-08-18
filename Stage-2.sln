@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms", "SortAlgor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{413D6B12-63BA-47D0-9696-D494EEBFDCDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ref-Out-In", "Ref-Out-In\Ref-Out-In.csproj", "{9FAC251C-15B3-4CC7-BCF2-A948B382B576}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{413D6B12-63BA-47D0-9696-D494EEBFDCDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{413D6B12-63BA-47D0-9696-D494EEBFDCDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{413D6B12-63BA-47D0-9696-D494EEBFDCDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FAC251C-15B3-4CC7-BCF2-A948B382B576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FAC251C-15B3-4CC7-BCF2-A948B382B576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FAC251C-15B3-4CC7-BCF2-A948B382B576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FAC251C-15B3-4CC7-BCF2-A948B382B576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
