@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyList", "MyList\MyList.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithms", "SortAlgorithms\SortAlgorithms.csproj", "{94B3E6E6-29DE-4BCF-ADEE-8D40C5517DB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{413D6B12-63BA-47D0-9696-D494EEBFDCDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{94B3E6E6-29DE-4BCF-ADEE-8D40C5517DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94B3E6E6-29DE-4BCF-ADEE-8D40C5517DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94B3E6E6-29DE-4BCF-ADEE-8D40C5517DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413D6B12-63BA-47D0-9696-D494EEBFDCDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413D6B12-63BA-47D0-9696-D494EEBFDCDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413D6B12-63BA-47D0-9696-D494EEBFDCDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413D6B12-63BA-47D0-9696-D494EEBFDCDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
