@@ -96,6 +96,7 @@
                 Console.Write(outputArrayS[i] + " ");
             }
             Console.WriteLine();
+
         }
     }
 }
