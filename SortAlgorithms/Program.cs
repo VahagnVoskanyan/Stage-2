@@ -6,7 +6,6 @@
         {
             if (minIndex >= maxIndex)
                 return arr;
-            int pivotIndex = maxIndex; //Comparison element index.
             int wallIndex = minIndex; //Wall left side is small than "pivot" and right is big.
             int pivot = arr[maxIndex]; //Comparison element.
             for (int i = minIndex; i < maxIndex; i++)
@@ -28,19 +27,35 @@
             QuickSort(arr, wallIndex + 1, maxIndex);
             return arr;
         }
-        static int[] BubleSort(int[] arr, int maxindex)
+        static int[] BubleSort(int[] arr, int maxIndex)
         {
-            if (maxindex <= 0)
+            if (maxIndex <= 0)
                 return arr;
-            for (int i = 0; i < maxindex; i++)
+            for (int i = 0; i < maxIndex; i++)
             {
-                if (arr[i] > arr[i+1])
+                if (arr[i] > arr[i + 1])
                 {
-                    Swap(ref arr[i], ref arr[i+1]);
+                    Swap(ref arr[i], ref arr[i + 1]);
                 }
             }
-            maxindex--;
-            BubleSort(arr, maxindex);
+            maxIndex--;
+            BubleSort(arr, maxIndex);
+            return arr;
+        }
+        static int[] SelectionSort(int[] arr, int minIndex)
+        {
+            if (minIndex >= arr.Length - 1)
+                return arr;
+            int CurrentMinimum = arr[minIndex];
+            for (int i = minIndex + 1; i < arr.Length; i++)
+            {
+                if(arr[i] < CurrentMinimum)
+                {
+                    CurrentMinimum = arr[i];
+                }
+                Swap(ref arr[minIndex], ref CurrentMinimum);
+            }
+            SelectionSort(arr, minIndex + 1);
             return arr;
         }
         static void Swap(ref int leftItem, ref int rightItem)
@@ -59,17 +74,26 @@
                 inputArray[i] = random.Next(0, 99);
                 Console.Write(inputArray[i] + " ");
             }
-            Console.WriteLine("\nSorted by Quick Sort.");
+            Console.WriteLine("\n------------------------------");
+            Console.WriteLine("Sorted by Quick Sort.");
             int[] outputArrayQ = QuickSort(inputArray, 0, inputArray.Length - 1);
             for (int i = 0; i < outputArrayQ.Length; i++)
             {
                 Console.Write(outputArrayQ[i] + " ");
             }
             int[] outputArrayB = BubleSort(inputArray, inputArray.Length - 1);
-            Console.WriteLine("\nSorted by Buble Sort.");
+            Console.WriteLine("\n------------------------------");
+            Console.WriteLine("Sorted by Buble Sort.");
             for (int i = 0; i < outputArrayB.Length; i++)
             {
                 Console.Write(outputArrayB[i] + " ");
+            }
+            int[] outputArrayS = SelectionSort(inputArray, 0);
+            Console.WriteLine("\n------------------------------");
+            Console.WriteLine("Sorted by Selection Sort.");
+            for (int i = 0; i < outputArrayS.Length; i++)
+            {
+                Console.Write(outputArrayS[i] + " ");
             }
             Console.WriteLine();
         }
