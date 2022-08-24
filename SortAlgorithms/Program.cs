@@ -6,9 +6,9 @@
         {
             if (minIndex >= maxIndex)
                 return arr;
-            int pivotIndex = maxIndex;//Comparison element index.
-            int wallIndex = minIndex;//Wall left side is small than "pivot" and right is big.
-            int pivot = arr[maxIndex];//Comparison element.
+            int pivotIndex = maxIndex; //Comparison element index.
+            int wallIndex = minIndex; //Wall left side is small than "pivot" and right is big.
+            int pivot = arr[maxIndex]; //Comparison element.
             for (int i = minIndex; i < maxIndex; i++)
             {
                 if (arr[i] <= pivot)
@@ -20,7 +20,7 @@
                     wallIndex++;
                 }
             }
-            if (wallIndex != maxIndex)//Puts "pivot" to his place.
+            if (wallIndex != maxIndex) //Puts "pivot" to his place.
             {
                 Swap(ref arr[wallIndex], ref arr[maxIndex]);
             }
