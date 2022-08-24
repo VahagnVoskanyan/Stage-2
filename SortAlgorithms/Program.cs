@@ -32,11 +32,11 @@
         {
             if (maxindex <= 0)
                 return arr;
-            for (int i = 0, j = 1; j <= maxindex; i++, j++)
+            for (int i = 0; i < maxindex; i++)
             {
-                if (arr[i] > arr[j])
+                if (arr[i] > arr[i+1])
                 {
-                    Swap(ref arr[i], ref arr[j]);
+                    Swap(ref arr[i], ref arr[i+1]);
                 }
             }
             maxindex--;
