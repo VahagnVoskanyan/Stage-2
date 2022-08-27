@@ -42,14 +42,14 @@
             BubleSort(arr, maxIndex);
             return arr;
         }
-        static int[] SelectionSort(int[] arr, int minIndex)
+        static int[] SelectionSort(int[] arr, int minIndex = 0)
         {
             if (minIndex >= arr.Length - 1)
                 return arr;
             int CurrentMinimum = arr[minIndex];
             for (int i = minIndex + 1; i < arr.Length; i++)
             {
-                if(arr[i] < CurrentMinimum)
+                if (arr[i] < CurrentMinimum)
                 {
                     CurrentMinimum = arr[i];
                 }
@@ -57,6 +57,26 @@
             }
             SelectionSort(arr, minIndex + 1);
             return arr;
+        }
+        static int BinerySearch(int[] arr, int item, int maxIndex, int minIndex = 0)
+        {
+            int midIndex = (maxIndex + minIndex) / 2;
+            if (item == arr[midIndex])
+            {
+                return midIndex;
+            }
+            if (minIndex >= maxIndex)
+                return -1;
+            if (item < arr[midIndex])
+            {
+                maxIndex = midIndex - 1;
+            }
+            else
+            {
+                if (item > arr[midIndex])
+                    minIndex = midIndex + 1;
+            }
+            return BinerySearch(arr, item, maxIndex, minIndex);
         }
         static void Swap(ref int leftItem, ref int rightItem)
         {
@@ -88,15 +108,17 @@
             {
                 Console.Write(outputArrayB[i] + " ");
             }
-            int[] outputArrayS = SelectionSort(inputArray, 0);
+            int[] outputArrayS = SelectionSort(inputArray);
             Console.WriteLine("\n------------------------------");
             Console.WriteLine("Sorted by Selection Sort.");
             for (int i = 0; i < outputArrayS.Length; i++)
             {
                 Console.Write(outputArrayS[i] + " ");
             }
-            Console.WriteLine();
+            Console.WriteLine("");
 
+            int index = BinerySearch(inputArray, inputArray[9], inputArray.Length - 1);
+            Console.WriteLine("\nSearching item index: " + index);
         }
     }
 }
