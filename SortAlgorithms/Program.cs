@@ -21,7 +21,7 @@
             }
             if (wallIndex != maxIndex) //Puts "pivot" to his place.
             {
-                Swap(ref arr[wallIndex], ref arr[maxIndex]);
+                Swap(ref arr[wallIndex], ref arr[maxIndex]); //Changes Main Array
             }
             QuickSort(arr, minIndex, wallIndex - 1);
             QuickSort(arr, wallIndex + 1, maxIndex);
@@ -46,15 +46,16 @@
         {
             if (minIndex >= arr.Length - 1)
                 return arr;
-            int CurrentMinimum = arr[minIndex];
+            int CurrentMinIndex = minIndex; //Index of minimal number
             for (int i = minIndex + 1; i < arr.Length; i++)
             {
-                if (arr[i] < CurrentMinimum)
+                if (arr[i] < arr[CurrentMinIndex])
                 {
-                    CurrentMinimum = arr[i];
+                    CurrentMinIndex = i;
                 }
-                Swap(ref arr[minIndex], ref CurrentMinimum);
             }
+            if (CurrentMinIndex != minIndex)
+                Swap(ref arr[minIndex], ref arr[CurrentMinIndex]);
             SelectionSort(arr, minIndex + 1);
             return arr;
         }
@@ -62,9 +63,7 @@
         {
             int midIndex = (maxIndex + minIndex) / 2;
             if (item == arr[midIndex])
-            {
                 return midIndex;
-            }
             if (minIndex >= maxIndex)
                 return -1;
             if (item < arr[midIndex])
@@ -78,7 +77,7 @@
             }
             return BinerySearch(arr, item, maxIndex, minIndex);
         }
-        static void Swap(ref int leftItem, ref int rightItem)
+        static void Swap(ref int leftItem, ref int rightItem)  
         {
             int temp = leftItem;
             leftItem = rightItem;
@@ -86,38 +85,27 @@
         }
         static void Main(string[] args)
         {
-            int[] inputArray = new int[10];
+            int[] arr = new int[30];
             Random random = new Random();
             Console.WriteLine("Your input array.");
-            for (int i = 0; i < inputArray.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                inputArray[i] = random.Next(0, 99);
-                Console.Write(inputArray[i] + " ");
+                arr[i] = random.Next(0, 99);
+                Console.Write(arr[i] + " ");
             }
             Console.WriteLine("\n------------------------------");
-            Console.WriteLine("Sorted by Quick Sort.");
-            int[] outputArrayQ = QuickSort(inputArray, 0, inputArray.Length - 1);
-            for (int i = 0; i < outputArrayQ.Length; i++)
+            Console.WriteLine("Sorted array.");
+            //arr = QuickSort(arr, 0, arr.Length - 1);
+            //arr = BubleSort(arr, arr.Length - 1);
+            //arr = SelectionSort(arr);
+            Merge.MergeSort(arr, 0, arr.Length - 1);
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.Write(outputArrayQ[i] + " ");
-            }
-            int[] outputArrayB = BubleSort(inputArray, inputArray.Length - 1);
-            Console.WriteLine("\n------------------------------");
-            Console.WriteLine("Sorted by Buble Sort.");
-            for (int i = 0; i < outputArrayB.Length; i++)
-            {
-                Console.Write(outputArrayB[i] + " ");
-            }
-            int[] outputArrayS = SelectionSort(inputArray);
-            Console.WriteLine("\n------------------------------");
-            Console.WriteLine("Sorted by Selection Sort.");
-            for (int i = 0; i < outputArrayS.Length; i++)
-            {
-                Console.Write(outputArrayS[i] + " ");
+                Console.Write(arr[i] + " ");
             }
             Console.WriteLine("");
-
-            int index = BinerySearch(inputArray, inputArray[9], inputArray.Length - 1);
+            int index = BinerySearch(arr, arr[3], arr.Length - 1);
+            //if before third element we have element equal to third, the result will be the index of that element
             Console.WriteLine("\nSearching item index: " + index);
         }
     }
