@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSystem", "FileSystem\Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Threads\Threads.csproj", "{C5703F0A-7460-4063-A262-C7E07CC77429}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async-Await", "Async-Await\Async-Await.csproj", "{C506752D-B8A3-4BC3-A4C4-40FC03B7A1EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Async-Await", "Async-Await\Async-Await.csproj", "{C506752D-B8A3-4BC3-A4C4-40FC03B7A1EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thread-Task-Async", "Thread-Task-Async\Thread-Task-Async.csproj", "{1B5BEFDB-EABA-47E5-8C0B-BAB5B89E985C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{C506752D-B8A3-4BC3-A4C4-40FC03B7A1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C506752D-B8A3-4BC3-A4C4-40FC03B7A1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C506752D-B8A3-4BC3-A4C4-40FC03B7A1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5BEFDB-EABA-47E5-8C0B-BAB5B89E985C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5BEFDB-EABA-47E5-8C0B-BAB5B89E985C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5BEFDB-EABA-47E5-8C0B-BAB5B89E985C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5BEFDB-EABA-47E5-8C0B-BAB5B89E985C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
